@@ -1,0 +1,614 @@
+@charset "utf-8";
+@import './mixin';
+
+body#stay {
+  font-family: "Noto Serif JP", serif;
+
+  .header {
+    opacity: 1;
+    pointer-events: painted;
+    transform: translateY(0);
+  }
+
+/* =========================================================
+   Rooms Hero
+========================================================= */
+  .rooms-hero {
+    position: relative;
+    margin-top: 90px;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+    z-index: 2;
+    clip-path: url(#stay-hero-clip);
+
+    @include media-sp {
+      margin-top: 80px;
+    }
+
+    &__image {
+      position: absolute;
+      inset: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right,
+            rgb(26, 26, 26) 0%,
+            rgba(26, 26, 26, 0.5) 35%,
+            rgba(26, 26, 26, 0) 60%);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      color: var(--color-wh);
+      z-index: 2;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+
+      @include media-sp {
+        left: 0;
+        padding: 0 20px;
+      }
+    }
+
+    &__en {
+      margin-bottom: 10px;
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: 0.15em;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 35px;
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: 400;
+      letter-spacing: 0.15em;
+    }
+
+    &__text {
+      font-size: 1rem;
+      line-height: 2;
+      letter-spacing: 0.12em;
+
+      @include media-sp {
+        font-size: .9rem;
+      }
+    }
+
+    &__catch {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      padding-bottom: 2rem;
+    }
+  }
+
+  /* -------------------------
+     stay-hero-svg
+  ------------------------- */
+  .stay-hero-svg {
+    position: absolute;
+  }
+
+/* =========================================================
+   Rooms Introduction
+========================================================= */
+  .rooms-intro {
+    width: 100%;
+    min-height: 500px;
+    margin-top: -5rem;
+    position: relative;
+    background:
+      radial-gradient(circle at 20% 30%,
+        rgba(255, 255, 255, 0.7),
+        transparent 35%),
+      radial-gradient(circle at 80% 70%,
+        rgba(220, 214, 198, 0.25),
+        transparent 40%),
+      linear-gradient(135deg,
+        #f8f6f0,
+        #f1eee6);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg,
+          rgba(120, 110, 90, 0.025) 0,
+          rgba(120, 110, 90, 0.025) 1px,
+          transparent 1px,
+          transparent 4px);
+    }
+
+    &__decoration {
+      width: 35%;
+
+      @include media-sp {
+        display: none;
+      }
+    }
+
+    &__inner {
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 1px;
+        background-color: var(--color-nv50);
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__number {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    &__text {
+      padding: 1rem;
+      line-height: 2;
+      letter-spacing: 0.12em;
+    }
+  }
+
+  .section-title {
+    padding-bottom: 3rem;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.15em;
+
+    &__ja {
+      font-size: clamp(1.5rem, 3vw, 2.8rem);
+    }
+
+    &__en {
+      font-size: 1rem;
+      color: var(--color-nv50);
+      padding-bottom: 1rem;
+    }
+  }
+
+/* =========================================================
+   Rooms
+========================================================= */
+
+  .rooms {
+    width: 100%;
+
+    &__item {
+      width: 100%;
+    }
+
+    &__header {
+      position: relative;
+      width: 100%;
+      height: 300px;
+
+      @include media-sp {
+        height: 200px;
+      }
+    }
+
+    &__image {
+      height: 300px;
+      position: absolute;
+      inset: 0;
+
+      @include media-sp {
+        height: 200px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right,
+            rgb(26, 26, 26) 0%,
+            rgba(26, 26, 26, 0.5) 35%,
+            rgba(26, 26, 26, 0) 60%);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__heading {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      z-index: 2;
+      color: var(--color-wh);
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      font-weight: normal;
+    }
+
+    &__en {
+      margin-bottom: 1rem;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: 0.2em;
+    }
+
+    &__ja {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+    }
+
+    &__catch {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      padding-bottom: 2rem;
+
+    }
+
+    &__body {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      padding: 6rem 10% 8rem;
+
+      @include media-tb {
+        flex-direction: column;
+      }
+
+      @include media-sp {
+        padding: 3rem 0 6rem;
+      }
+    }
+
+    &__content {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      @include media-sp {
+        padding: 0 1rem;
+      }
+    }
+
+    &__description {
+      padding-bottom: 2rem;
+      line-height: 1.6;
+      line-height: 2;
+    }
+
+    &__info-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 1rem;
+
+      dt {
+        width: 25px;
+        aspect-ratio: 1;
+      }
+
+      dd {
+        color: var(--color-nv);
+        line-height: 1.5;
+      }
+    }
+
+    .btn-1 {
+      margin-top: 2rem;
+
+      @include media-sp {
+        margin: 2rem auto 0;
+      }
+    }
+
+  /* -------------------------
+     swiper
+  ------------------------- */
+    &__slider {
+      flex: 2;
+      width: 100%;
+      height: auto;
+    }
+
+    &__slide {
+      width: 100%;
+      height: 400px;
+
+      @include media-tb {
+        height: 250px;
+      }
+    }
+
+    &__slide-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__pagination {
+      position: static;
+      width: 100%;
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    &__pagination-item {
+      position: relative;
+      width: 80px;
+      height: 55px;
+      padding: 0;
+      background: rgba(10, 25, 45, 0.7);
+      cursor: pointer;
+      opacity: 0.6;
+      transition:
+        opacity 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &.swiper-pagination-bullet-active {
+        border: 2px solid var(--color-gd);
+        opacity: 1;
+        transform: translateY(-3px);
+        border-radius: 0;
+      }
+    }
+
+    @include media-tb {
+      br {
+        display: none;
+      }
+    }
+
+    @include media-sp {
+      br {
+        display: inherit;
+      }
+    }
+  }
+
+  article {
+    scroll-margin-top: 80px;
+  }
+
+/* =========================================================
+   Facilities
+========================================================= */
+
+  .facilities {
+    background-color: var(--main-color);
+    padding: 9rem 10%;
+
+    @include media-sp {
+      padding: 5rem 10%;
+    }
+
+    .section-title {
+      text-align: center;
+
+      &__main {
+        font-size: 2rem;
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 3rem 1rem;
+
+      @include media-sp {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+      }
+    }
+
+    .facility-card {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      border-radius: 5px;
+      overflow: hidden;
+
+      &__title {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        padding: 0 1rem;
+        font-weight: normal;
+        background-color: var(--color-wh);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      &__en {
+        font-size: .75rem;
+        padding-bottom: 10px;
+        color: var(--color-nv50);
+      }
+
+      &__ja {
+        font-size: 1rem;
+      }
+
+      &__button {
+        flex: 2;
+        aspect-ratio: 4 / 3;
+        border: none;
+        position: relative;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__more {
+        position: absolute;
+        inset: 0;
+        color: var(--color-wh);
+        background-color: rgba(0, 0, 0, 0.412);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        &::before {
+          display: block;
+          content: "";
+          width: 100px;
+          height: 40px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #fff;
+          border: 1px solid #fff;
+          border-radius: 5px;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
+/* =========================================================
+   Facilities Modal
+========================================================= */
+  .facility-modal {
+    width: min(90%, 1000px);
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+
+    &::backdrop {
+      background-color: #000000c9;
+    }
+
+    &__container {
+      background-color: #fff;
+      padding: 5rem;
+
+      @include media-sp {
+        padding: 5rem 1rem;
+      }
+    }
+
+    &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: var(--color-nv);
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--color-gd);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 30px;
+        background: #fff;
+        transition: transform 0.3s;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    &__title {
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      font-family: "Noto Serif JP", serif;
+      text-align: center;
+    }
+
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      @include media-sp {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+
+    &__list li {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      line-height: 1.5;
+    }
+
+    &__bullet {
+      color: var(--color-nv);
+      font-size: 1.5rem;
+    }
+  }
+
+}

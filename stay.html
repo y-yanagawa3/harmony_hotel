@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 検索除け -->
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="description"
+    content="大阪・梅田の「HARMONY HOTEL」の宿泊プラン・客室紹介。スイートからスタンダードまで多彩な客室をご用意。上質な空間と快適な設備で、くつろぎのひとときをお過ごしください。">
+  <title>HARMONY HOTEL | 客室案内</title>
+  <link rel="icon" href="./img/common/favicon.ico">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/db9906ce49.js" crossorigin="anonymous"></script>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body id="stay" class="stay">
+
+  <header class="header">
+    <div class="header__container">
+      <button class="hum">
+        <span class="hum__line"></span></span>
+        <span class="hum__line"></span></span>
+        <span class="hum__label">MENU</span>
+      </button>
+
+      <details class="language-menu">
+        <summary class="language-menu__summary">Language</summary>
+        <div class="language-menu__content">
+          <a href="">JP</a>
+          <a href="">EN</a>
+        </div>
+      </details>
+
+      <h1 class="header__logo">
+        <a href="./index.html"><img class="header__logo-img" src="./img/common/logo-bk-t.png" alt="HARMONY HOTEL"></a>
+      </h1>
+
+    </div>
+
+    <nav class="header-nav">
+      <ul class="header-nav__list">
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="./stay.html">
+            <span class="header-nav__en">Stay</span>
+            <span span class="header-nav__jp">宿泊</span>
+          </a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="./restaurant.html">
+            <span class="header-nav__en">Restaurant</span>
+            <span span class="header-nav__jp">レストラン</span>
+          </a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="./wedding.html">
+            <span class="header-nav__en">Wedding</span>
+            <span span class="header-nav__jp">ウェディング</span>
+          </a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="./coming-soon.html">
+            <span class="header-nav__en">Meeting&amp;Events</span>
+            <span span class="header-nav__jp">会議＆イベント</span>
+          </a>
+        </li>
+
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="./access.html">
+            <span class="header-nav__en">Access</span>
+            <span span class="header-nav__jp">アクセス</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="reservation-button">
+      <div class="reservation-button__inner">
+        <i class="reservation-button__icon fa-regular fa-calendar-days"></i>
+        <span class="reservation-button__text">ご予約</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================
+         Rooms Hero
+    ========================== -->
+    <section class="rooms-hero">
+      <div class="rooms-hero__image">
+        <img src="./img/stay/stay-main.webp" alt="">
+      </div>
+
+      <div class="rooms-hero__content">
+        <h2 class="rooms-hero__title">
+          <span class="rooms-hero__en">STAY</span>
+          <span class="rooms-hero__ja">宿泊</span>
+        </h2>
+        <div class="rooms-hero__text">
+          <p class="rooms-hero__catch">
+            やすらぎに包まれる、<br>
+            特別なひとときを。
+          </p>
+          <p class="rooms-hero__description">
+            上質な空間と、心を満たすおもてなしで<br>
+            旅の時間をより豊かに。<br>
+            3つのグレードの客室をご用意しています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         Rooms Intro
+    ========================== -->
+    <section class="rooms-intro">
+      <div class="rooms-intro__decoration">
+        <img src="./img/stay/rooms-leaf01.svg" alt="">
+      </div>
+
+      <div class="rooms-intro__inner">
+        <h2 class="rooms-intro__title section-title">
+          <span class="rooms-intro__en section-title__en">ROOMS</span>
+          <span class="rooms-intro__ja section-title__ja">選べる<span class="rooms-intro__number">3</span>つのグレード</span>
+        </h2>
+
+        <p class="rooms-intro__text">
+          シンプルで心地よいスタンダードから、ゆとりある空間のデラックス、<br>
+          そして特別な時間を過ごせるスイートまで。<br>
+          あなたの旅にふさわしい一室をお選びください。
+        </p>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         Rooms
+    ========================== -->
+    <section class="rooms">
+
+      <!-- -------------------------
+           Standard Room
+      -------------------------- -->
+      <article id="standard-room" class="rooms__item rooms__item--standard">
+        <div class="rooms__header">
+          <div class="rooms__image rooms__image--standard">
+            <img src="./img/stay/standard-room.webp" alt="スタンダードルーム">
+          </div>
+          <div class="rooms__heading">
+            <h3 class="rooms__title rooms__title--standard">
+              <span class="rooms__en">Standard</span>
+              <span class="rooms__ja">スタンダード</span>
+            </h3>
+          </div>
+        </div>
+
+        <div class="rooms__body">
+          <div class="rooms__content rooms__content--standard">
+            <p class="rooms__catch">
+              シンプルで心地よい、<br>
+              快適な滞在を。
+            </p>
+            <div class="rooms__description">
+              <p>
+                機能的でありながら、<br>
+                優しい光に包まれた心地よい空間、<br>
+                ビジネスにも観光にもおすすめです。
+              </p>
+            </div>
+            <div class="rooms__info">
+              <dl>
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-floor-plan.svg" alt="">
+                  </dt>
+                  <dd>25㎡</dd>
+                </div>
+
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-bed.svg" alt="">
+                  </dt>
+                  <dd>ダブル（180cm×200cm）または、<br>ツイン（110cm×200cm）</dd>
+                </div>
+
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-people.svg" alt="">
+                  </dt>
+                  <dd>1〜2名</dd>
+                </div>
+
+              </dl>
+            </div>
+
+            <a class="btn-1" href="javascript:void(0);">詳細を見る</a>
+          </div>
+
+          <div class="rooms__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/standard-bed.webp" alt="ベッドルーム">
+              </div>
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/standard-bathroom.webp" alt="バスルーム">
+              </div>
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/standard-view.webp" alt="客室からの景色">
+              </div>
+            </div>
+
+            <div class="rooms__pagination swiper-pagination"></div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- -------------------------
+           Deluxe Room
+      -------------------------- -->
+      <article id="deluxe-room" class="rooms__item rooms__item--deluxe">
+        <div class="rooms__header">
+          <div class="rooms__image rooms__image--deluxe">
+            <img src="./img/stay/deluxe-room.webp" alt="デラックスルーム">
+          </div>
+          <div class="rooms__heading">
+            <h3 class="rooms__title rooms__title--deluxe">
+              <span class="rooms__en">Deluxe</span>
+              <span class="rooms__ja">デラックス</span>
+            </h3>
+
+          </div>
+        </div>
+
+        <div class="rooms__body">
+          <div class="rooms__content rooms__content--deluxe">
+            <p class="rooms__catch">
+              上質な空間で、<br>
+              ゆとりのある滞在を。
+            </p>
+            <div class="rooms__description">
+              <p>
+                広めの空間に上質なインテリアが魅力の<br>
+                デラックスルーム。<br>
+                ゆとりのある滞在で、心からのくつろぎを<br>
+                お届けします。
+              </p>
+            </div>
+            <div class="rooms__info">
+              <dl>
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-floor-plan.svg" alt="">
+                  </dt>
+                  <dd>36㎡</dd>
+                </div>
+
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-bed.svg" alt="">
+                  </dt>
+                  <dd>ダブル（180cm×200cm）または、<br>ツイン（110cm×200cm）</dd>
+                </div>
+
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-people.svg" alt="">
+                  </dt>
+                  <dd>1〜3名</dd>
+                </div>
+
+              </dl>
+            </div>
+
+            <a class="btn-1" href="javascript:void(0);">詳細を見る</a>
+          </div>
+
+          <div class="rooms__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/deluxe-bed.webp" alt="ベッドルーム">
+              </div>
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/deluxe-bathroom.webp" alt="バスルーム">
+              </div>
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/deluxe-view.webp" alt="客室からの景色">
+              </div>
+            </div>
+
+            <div class="rooms__pagination swiper-pagination"></div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- -------------------------
+           Suite Room
+      -------------------------- -->
+      <article id="suite-room" class="rooms__item rooms__item--suite">
+        <div class="rooms__header">
+          <div class="rooms__image rooms__image--suite">
+            <img src="./img/stay/suite-room.webp" alt="スイートルーム">
+          </div>
+          <div class="rooms__heading">
+            <h3 class="rooms__title rooms__title--suite">
+              <span class="rooms__en">Suite</span>
+              <span class="rooms__ja">スイート</span>
+            </h3>
+          </div>
+        </div>
+
+        <div class="rooms__body">
+          <div class="rooms__content rooms__content--standard">
+            <p class="rooms__catch">
+              特別なひとときを演出する、<br>
+              最上級の空間。
+            </p>
+            <div class="rooms__description">
+              <p>
+                広々としたリビングスペースと、<br>
+                上質なインテリアが織りなすスイートルーム。<br>
+                贅沢なひとときをお過ごしいただけます。
+              </p>
+            </div>
+            <div class="rooms__info">
+              <dl>
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-floor-plan.svg" alt="">
+                  </dt>
+                  <dd>65㎡</dd>
+                </div>
+
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-bed.svg" alt="">
+                  </dt>
+                  <dd>キング（200cm×200cm）</dd>
+                </div>
+
+                <div class="rooms__info-item">
+                  <dt>
+                    <img src="./img/stay/icon-people.svg" alt="">
+                  </dt>
+                  <dd>1〜4名</dd>
+                </div>
+
+              </dl>
+            </div>
+
+            <a class="btn-1" href="javascript:void(0);">詳細を見る</a>
+          </div>
+
+
+          <div class="rooms__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/suite-bed.webp" alt="ベッドルーム">
+              </div>
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/suite-bathtub.webp" alt="バスルーム">
+              </div>
+              <div class="rooms__slide swiper-slide">
+                <img class="rooms__slide-image" src="./img/stay/suite-living.webp" alt="客室からの景色">
+              </div>
+            </div>
+
+            <div class="rooms__pagination swiper-pagination"></div>
+          </div>
+
+        </div>
+      </article>
+
+    </section>
+
+    <!-- =========================
+         Facilities
+    ========================== -->
+    <section class="facilities">
+
+      <h2 class="facilities__title section-title">
+        <span class="facilities__en section-title__en">Common Facilities</span>
+        <span class="facilities__ja section-title__ja">共通設備</span>
+      </h2>
+
+      <div class="facilities__list">
+        <div class="facility-card" data-facility="room">
+          <h3 class="facility-card__title">
+            <span class="facility-card__en">Room Facilities</span>
+            <span class="facility-card__ja">客室設備</span>
+          </h3>
+          <button type="button" class="facility-card__button">
+            <img src="./img/stay/room-facilities.webp" alt="客室設備" class="facility-card__image">
+            <span class="facility-card__more">MORE</span>
+          </button>
+        </div>
+
+        <div class="facility-card" data-facility="equipment">
+          <h3 class="facility-card__title">
+            <span class="facility-card__en">Room Equipment</span>
+            <span class="facility-card__ja">客室備品</span>
+          </h3>
+          <button type="button" class="facility-card__button">
+            <img src="./img/stay/room-equipment.webp" alt="客室備品" class="facility-card__image">
+            <span class="facility-card__more">MORE</span>
+          </button>
+        </div>
+
+        <div class="facility-card" data-facility="amenity">
+          <h3 class="facility-card__title">
+            <span class="facility-card__en">Amenities</span>
+            <span class="facility-card__ja">アメニティ</span>
+          </h3>
+          <button type="button" class="facility-card__button">
+            <img src="./img/stay/amenities.webp" alt="アメニティ" class="facility-card__image">
+            <span class="facility-card__more">MORE</span>
+          </button>
+        </div>
+
+        <div class="facility-card" data-facility="rental">
+          <h3 class="facility-card__title">
+            <span class="facility-card__en">Complimentary Items</span>
+            <span class="facility-card__ja">無料貸出品</span>
+          </h3>
+          <button type="button" class="facility-card__button">
+            <img src="./img/stay/free-loan-items.webp" alt="無料貸出品" class="facility-card__image">
+            <span class="facility-card__more">MORE</span>
+          </button>
+        </div>
+
+        <div class="facility-card" data-facility="service">
+          <h3 class="facility-card__title">
+            <span class="facility-card__en">Other Services</span>
+            <span class="facility-card__ja">その他サービス</span>
+          </h3>
+          <button type="button" class="facility-card__button">
+            <img src="./img/stay/other-services.webp" alt="その他サービス" class="facility-card__image">
+            <span class="facility-card__more">MORE</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+        Facilities Modaal
+  ========================== -->
+  <dialog class="facility-modal" id="facility-modal">
+    <div class="facility-modal__container">
+      <button type="button" class="facility-modal__close" aria-label="閉じる">
+      </button>
+      <div class="facility-modal__content">
+        <h2 class="facility-modal__title"></h2>
+        <div class="facility-modal__body">
+          <ul class="facility-modal__list"></ul>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- footer -->
+  <footer class="footer">
+    <nav class="global-nav">
+      <ul class="global-nav__list">
+        <li class="global-nav__item">
+          <a href="./stay.html"><span class="global-nav__en">Stay</span>
+            <span class="global-nav__ja">宿泊</span></a>
+        </li>
+        <li class="global-nav__item">
+          <a href="./restaurant.html"><span class="global-nav__en">Restaurant</span>
+            <span class="global-nav__ja">レストラン</span></a>
+        </li>
+        <li class="global-nav__item">
+          <a href="./wedding.html"><span class="global-nav__en">Wedding</span>
+            <span class="global-nav__ja">ウェディング</span></a>
+        </li>
+        <li class="global-nav__item">
+          <a href="javascript:void(0);"><span class="global-nav__en">Meeting&amp;Events</span>
+            <span class="global-nav__ja">会議＆イベント</span></a>
+        </li>
+        <li class="global-nav__item">
+          <a href="./access.html"><span class="global-nav__en">Access</span>
+            <span class="global-nav__ja">アクセス</span></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="footer__container">
+      <div class="footer__main">
+        <div class="footer__logo">
+          <a href="#"><img src="./img/common/logo-wh-t.png" alt="HARMONY HOTEL"></a>
+        </div>
+        <div class="footer__address">
+          <address><small>〒555-5555</small> ⼤阪府⼤阪市北区梅⽥〇丁⽬</address>
+          <a href="">TEL：06-XXXX-XXXX</a>
+        </div>
+        <div class="reservation-button">
+          <div class="reservation-button__inner">
+            <i class="reservation-button__icon fa-regular fa-calendar-days"></i>
+            <span class="reservation-button__text">ご予約</span>
+          </div>
+          <a class="contact-btn" href="./contact.html">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="contact-button__text">お問い合わせ</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer__sns">
+        <i class="footer__sns-icon fa-brands fa-instagram fa-lg"></i>
+        <i class="footer__sns-icon fa-brands fa-facebook fa-lg"></i>
+        <i class="footer__sns-icon fa-brands fa-x-twitter fa-lg"></i>
+        <i class="footer__sns-icon fa-brands fa-line fa-lg"></i>
+        <i class="footer__sns-icon fa-brands fa-youtube fa-lg"></i>
+      </div>
+      <nav class="footer__utility">
+        <ul class="footer__utility-list">
+          <li class="footer__utility-item"><a href="">FAQ</a></li>
+          <li class="footer__utility-item"><a href="">会社概要</a></li>
+          <li class="footer__utility-item"><a href="">ご利用規則</a></li>
+          <li class="footer__utility-item"><a href="">ベストレート保証</a></li>
+          <li class="footer__utility-item"><a href="">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+      <p class="footer__copyright">
+        <small>&copy; HARMONY HOTEL All Rights Reserved.</small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================
+       Reservatuin Modal
+  ========================== -->
+  <div id="reservation" class="reservation-modal">
+    <div class="reservation-modal__overlay"></div>
+    <button type="button" class="reservation-modal__close" aria-label="閉じる"></button>
+    <div class="reservation-modal__container">
+
+      <!-- -------------------------
+       Reservation tabs
+      -------------------------- -->
+      <ul class="reservation-modal__tabs" id="reservation-tabs" role="tablist">
+        <li class="reservation-modal__tab is-active">
+          <button type="button" aria-controls="stay-reservation" aria-selected="true">宿泊予約</button>
+        </li>
+        <li class="reservation-modal__tab">
+          <button type="button" aria-controls="restaurant-reservation" aria-selected="false">レストラン予約
+          </button>
+        </li>
+        <li class="reservation-modal__tab">
+          <button type="button" aria-controls="wedding-reservation" aria-selected="false">
+            ウェディング予約
+          </button>
+        </li>
+        <li class="reservation-modal__tab">
+          <button type="button" aria-controls="event-reservation" aria-selected="false">
+            イベント予約
+          </button>
+        </li>
+      </ul>
+
+      <!-- -------------------------
+       Reservatuin Panels
+      -------------------------- -->
+      <!-- Stay panel -->
+      <div id="stay-reservation" class="reservation-modal__panel is-active" role="tabpanel" aria-labelledby="tab-stay">
+        <div class="reservation-modal__body">
+          <div class="reservation-modal__content">
+            <ul class="reservation-modal__links reservation-modal__links--stay">
+              <li>
+                <a href="javascript:void(0);">宿泊プランから探す</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">客室タイプから探す</a>
+              </li>
+            </ul>
+
+            <p class="reservation-modal__info">チェックイン 15:00〜24:00/ チェックアウト 〜12:00</p>
+            <div class="reservation-modal__note">
+              <p>※ご利用のプランにより異なる場合がございます。</p>
+              <p>※お車でお越しのお客様には2,000円／泊の駐車料金を頂戴しております。</p>
+            </div>
+          </div>
+        </div>
+        <div class="reservation-modal__footer">
+          <ul class="reservation-modal__footer-list">
+            <li>
+              <a href="./contact.html">お問い合わせ</a>
+            </li>
+            <li>
+              <a href="tel:06-XXXX-XXXX">TEL：06-XXXX-XXXX</a>
+            </li>
+            <li>
+              <a href="mailto:hormony@exmaple.com">MAIL：hormony@exmaple.com</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">よくあるご質問</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Restaurant panel -->
+      <div id="restaurant-reservation" class="reservation-modal__panel" role="tabpanel" aria-labelledby="tab-restaurant"
+        hidden>
+        <div class="reservation-modal__body">
+          <div class="reservation-modal__content">
+            <ul class="reservation-modal__links reservation-modal__links--restaurant">
+              <li>
+                <img class="food-img" src="./img/restaurant/sora-lunch.webp" alt="フードの画像">
+                <p><small>レストラン</small></p>
+                <p>空- Sora -</p>
+                <a class="btn-2" href="javascript:void(0);">オンライン予約</a>
+              </li>
+              <li>
+                <img class="food-img" src="./img/restaurant/en-dinner.webp" alt="フード画像">
+                <p><small>レストラン</small></p>
+                <p>緑 - En -</p>
+                <a class="btn-2" href="javascript:void(0);">オンライン予約</a>
+              </li>
+              <li>
+                <img class="food-img" src="./img/restaurant/yu-drink.webp" alt="カクテルの画像">
+                <p><small>バー</small></p>
+                <p>悠 - Yu -</p>
+                <a class="btn-2" href="javascript:void(0);">オンライン予約</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="reservation-modal__footer">
+          <ul class="reservation-modal__footer-list">
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="tel:06-XXXX-XXXX">TEL：06-XXXX-XXXX</a></li>
+            <li><a href="mailto:hormony@exmaple.com">MAIL：hormony@exmaple.com</a></li>
+            <li><a href="javascript:void(0);">よくあるご質問</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Wedding panel -->
+      <div id="wedding-reservation" class="reservation-modal__panel" role="tabpanel" aria-labelledby="tab-wedding"
+        hidden>
+        <div class="reservation-modal__body">
+          <div class="reservation-modal__content">
+            <ul class="reservation-modal__links reservation-modal__links--wedding">
+              <li>
+                <a href="javascript:void(0);">フェア予約</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">資料請求・お問い合わせ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="reservation-modal__footer">
+          <ul class="reservation-modal__footer-list">
+            <li>
+              <a href="./contact.html">お問い合わせ</a>
+            </li>
+            <li>
+              <a href="tel:06-XXXX-XXXX">TEL：06-XXXX-XXXX</a>
+            </li>
+            <li>
+              <a href="mailto:hormony@exmaple.com">MAIL：hormony@exmaple.com</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">よくあるご質問</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Event panel -->
+      <div id="event-reservation" class="reservation-modal__panel" role="tabpanel" aria-labelledby="tab-event" hidden>
+        <div class="reservation-modal__body">
+          <div class="reservation-modal__content">
+            <ul class="reservation-modal__links reservation-modal__links--event">
+              <li>
+                <a href="javascript:void(0);">宴会プラン一覧</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">イベント一覧</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reservation-modal__footer">
+          <ul class="reservation-modal__footer-list">
+            <li>
+              <a href="./contact.html">お問い合わせ</a>
+            </li>
+            <li>
+              <a href="tel:06-XXXX-XXXX">TEL：06-XXXX-XXXX</a>
+            </li>
+            <li>
+              <a href="mailto:hormony@exmaple.com">MAIL：hormony@exmaple.com</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">よくあるご質問</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="stay-hero-svg" width="0" height="0" aria-hidden="true">
+    <defs>
+      <clipPath id="stay-hero-clip" clipPathUnits="objectBoundingBox">
+        <path d="
+          M 0 0
+          H 1
+          V 1
+          C 0.78 1, 0.68 0.93, 0.5 0.93
+          C 0.32 0.93, 0.22 1, 0 1
+          Z
+        " />
+      </clipPath>
+    </defs>
+  </svg>
+</body>
+
+</html>

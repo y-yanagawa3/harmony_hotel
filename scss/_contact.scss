@@ -1,0 +1,106 @@
+body#contact{
+  width: 100%;
+  header{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: painted;
+  }
+  .contact-wrap{
+    width: 90%;
+    padding: 80px 0 150px;
+    margin: 0 auto;
+    h2{
+      padding: 100px 0;
+      text-align: center;
+      font-size: 2rem;
+      font-family: "Noto Serif JP", serif;
+      line-height: 1.2;
+      small{
+        font-size: .9rem;
+        font-family: "Noto Serif JP", serif;
+        color: var(--color-nv50);
+        padding-bottom: 10px;
+      }
+    }
+    .contact-info{
+      text-align: center;
+      line-height: 2;
+      p{
+        padding-bottom: 30px;
+      }
+      a{
+        font-size: 1.5rem;
+        border-bottom: 1px solid ;
+      }
+    }
+    form{
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      input{
+        font-family: "Zen Maru Gothic";
+      }
+      .form-area{
+        width: 100%;
+        padding: 50px 0 0;
+        dt{
+          padding-bottom: 10px;
+          font-weight: 500;
+        }
+        dd{
+          width: 100%;
+          padding-bottom: 30px;
+          .input-text{
+            width: 100%;
+            height: 40px;
+            padding: 5px;
+          }
+          .message{
+            width: 100%;
+            height: 200px;
+          }
+          .radio-button{
+            padding-left: 10px;
+            input{
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      .form-confirm{
+        padding: 50px 0 10px;
+        p{
+          padding-bottom: 30px;
+          line-height: 1.6;
+        }
+        .check-box{
+          input{
+            margin-right: 5px;
+          }
+        }
+      }
+      .submit-button{
+        display: block;
+        width: 100%;
+        height: 50px;
+        font-family: "Zen Maru Gothic";
+        font-weight: 500;
+        margin-top: 30px;
+        border-radius: 2px;
+        border: 1px solid var(--main-color);
+        background-color: var(--main-color);
+        transition: .2s;
+        &:hover{
+          background-color: var(--color-nv);
+          color: var(--color-wh);
+          border: 1px solid var(--color-nv);
+          border-radius: 2px;
+        }
+      }
+    }
+    .red{
+      color: red;
+      padding: 0 5px;
+    }
+  }
+}

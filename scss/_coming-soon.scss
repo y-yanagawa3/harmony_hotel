@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import './mixin';
+
+.header {
+  opacity: 1;
+  pointer-events: painted;
+  transform: translateY(0);
+  z-index: 1000;
+}
+
+.coming-soon {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+
+  &__section {
+    width: 100%;
+    padding: 150px 3rem;
+  }
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__label {
+    margin: 0 0 25px;
+    color: #b49a68;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+  }
+
+  &__title {
+    margin: 0;
+    color: #333;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+  }
+
+  &__text {
+    margin: 35px 0 50px;
+    color: #666;
+    font-size: 1.3rem;
+    line-height: 2;
+    letter-spacing: 0.1em;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 15px 45px;
+    border: 1px solid #b49a68;
+
+    color: #9b8455;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: #b49a68;
+      color: #fff;
+    }
+  }
+}

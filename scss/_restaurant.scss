@@ -1,0 +1,566 @@
+@charset "utf-8";
+@import './mixin';
+
+body#restaurant {
+  header {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: painted;
+  }
+
+/* =========================================================
+   Restaurant Hero
+========================================================= */
+  .restaurant-hero {
+    position: relative;
+    margin-top: 90px;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    color: #fff;
+
+    @include media-sp {
+      margin-top: 5rem;
+      height: 50vh;
+      min-height: 600px;
+    }
+
+    &__image {
+      position: absolute;
+      inset: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right,
+            rgb(30, 58, 95) 0%,
+            rgba(30, 58, 95, 0.5) 35%,
+            rgba(30, 58, 95, 0) 60%);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+  /* -------------------------
+      Content
+  ------------------------- */
+    &__content {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+
+      @include media-sp {
+        top: auto;
+        bottom: 15%;
+        left: 0;
+        padding: 0 20px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -10%;
+        width: 1px;
+        height: 100%;
+        background-color: var(--color-wh);
+
+        @include media-sp {
+          display: none;
+        }
+      }
+    }
+
+    &__en {
+      margin-bottom: 10px;
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: 0.15em;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 35px;
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(1.2rem, 2vw, 2rem);
+      font-weight: 400;
+      letter-spacing: 0.15em;
+    }
+
+    &__text {
+      font-family: "Noto Serif JP", serif;
+      font-size: 1rem;
+      line-height: 2.2;
+      letter-spacing: 0.12em;
+
+      @include media-sp {
+        font-size: .9rem;
+      }
+    }
+
+    &__scroll {
+      opacity: 0;
+      visibility: hidden;
+
+      @include media-sp {
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+
+        span {
+          display: block;
+          writing-mode: vertical-rl;
+          font-family: "Noto Serif JP", serif;
+          font-size: 0.65rem;
+          letter-spacing: 0.15em;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 60px;
+          margin: 10px auto 0;
+          overflow: hidden;
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 30px;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 20px;
+          background-color: #fff;
+          animation: scrollLine 2s ease-in-out infinite;
+        }
+      }
+    }
+
+    @keyframes scrollLine {
+      0% {
+        top: 45px;
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        top: 90px;
+        opacity: 0;
+      }
+    }
+  }
+
+
+/* =========================================================
+   Restaurant Introduction
+========================================================= */
+  .restaurant-intro {
+    padding: 120px 5%;
+
+    @include media-sp {
+      padding: 5rem 5%;
+    }
+
+    &__inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+
+      @include media-sp {
+        text-align: left;
+      }
+    }
+
+    &__en {
+      padding-bottom: 1rem;
+      font-family: "Noto Serif JP", serif;
+      color: var(--color-nv50);
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+    }
+
+    &__title {
+      margin-bottom: 35px;
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(1.5rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.1em;
+    }
+
+    &__text {
+      font-family: "Noto Serif JP", serif;
+      font-size: 0.95rem;
+      line-height: 2.2;
+      letter-spacing: 0.1em;
+
+      @include media-sp {
+        font-size: 0.9rem;
+      }
+    }
+
+    &__number {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+  }
+
+
+/* =========================================================
+   Restaurant Shop
+========================================================= */
+  .restaurant-shop {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &__main {
+      position: relative;
+    }
+
+    &__image {
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+
+      @include media-sp {
+        position: relative;
+        height: auto;
+        height: 250px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+    }
+
+  /* -------------------------
+      Content
+  ------------------------- */
+    &__content {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      width: 40%;
+      padding: 20px 0;
+
+      @include media-tb {
+        width: 100%;
+        left: 0;
+        padding: 20px;
+      }
+
+      @include media-sp {
+        position: static;
+        transform: none;
+        width: 100%;
+
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 90%;
+        background-color: var(--color-wh);
+
+        @include media-sp {
+          display: none;
+        }
+      }
+    }
+
+    &__heading {
+      @include media-sp {
+        position: absolute;
+        top: 80px;
+
+      }
+    }
+
+    &__label {
+      margin-bottom: 20px;
+      font-family: "Noto Serif JP", serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 0.9rem;
+        letter-spacing: 0.12em;
+      }
+    }
+
+    &__text {
+      margin-bottom: 15px;
+      font-family: "Noto Serif JP", serif;
+      font-size: 0.85rem;
+      line-height: 2.2;
+      letter-spacing: 0.08em;
+
+
+      @include media-sp {
+        position: relative;
+        top: 0;
+        transform: translateY(0);
+      }
+    }
+
+    &__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      width: fit-content;
+      min-width: 180px;
+      margin-top: 20px;
+      padding: 13px 20px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+
+      span {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+
+        span {
+          transform: translateX(5px);
+        }
+      }
+
+      &--dark {
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+
+        &:hover {
+          color: var(--color-cgy);
+          background-color: #fff;
+        }
+      }
+
+      &--light {
+        color: var(--color-cgy);
+        background-color: transparent;
+        border: 1px solid var(--color-cgy);
+
+        &:hover {
+          color: #fff;
+          background-color: var(--color-cgy);
+        }
+      }
+    }
+
+  /* -------------------------
+      Cards
+  ------------------------- */
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 25px 5% 80px;
+
+      @include media-tb {
+        padding: 20px 3% 5rem;
+        gap: 10px;
+      }
+    }
+
+    &__card {
+      position: relative;
+      overflow: hidden;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+      &:hover {
+        .restaurant-shop__card-image img {
+          transform: scale(1.05);
+        }
+
+        .restaurant-shop__card-arrow {
+          transform: translateX(5px);
+        }
+      }
+    }
+
+    &__card-image {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+
+      @include media-tb {
+        aspect-ratio: 3 / 1;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+    }
+
+    &__card-content {
+      position: relative;
+      padding: 15px 45px 15px 20px;
+    }
+
+    &__card-label {
+      margin-bottom: 5px;
+      font-family: "Noto Serif JP", serif;
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+    }
+
+    &__card-title {
+      position: relative;
+      font-family: "Noto Serif JP", serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+
+      @include media-tb {
+        &__card-title {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    &__card-arrow {
+      position: absolute;
+      right: 20px;
+      bottom: 15px;
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+  }
+
+
+/* =========================================================
+   Sora
+========================================================= */
+
+  .restaurant-shop--sora {
+    background-color: #fafafa;
+
+    .restaurant-shop__image {
+      &::before {
+        background: linear-gradient(to right,
+            rgb(250, 250, 250) 0%,
+            rgba(250, 250, 250, 0.5) 35%,
+            rgba(250, 250, 250, 0) 60%);
+
+        @include media-sp {}
+      }
+    }
+
+    .restaurant-shop__content {
+      &::before {
+        content: "";
+        background-color: var(--color-cgy);
+      }
+    }
+
+  }
+
+
+/* =========================================================
+   En
+========================================================= */
+
+  .restaurant-shop--en {
+    color: #fff;
+    background-color: #171717;
+
+    .restaurant-shop__image {
+      &::before {
+        background: linear-gradient(to right,
+            rgb(26, 26, 26) 0%,
+            rgba(26, 26, 26, 0.5) 35%,
+            rgba(26, 26, 26, 0) 60%);
+      }
+    }
+
+    .restaurant-shop__card {
+      background-color: #222;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+
+/* =========================================================
+   Yu
+========================================================= */
+
+  .restaurant-shop--yu {
+    color: #fff;
+    background-color: #071a2b;
+
+    .restaurant-shop__image {
+      &::before {
+        background: linear-gradient(to right,
+            rgb(7, 26, 47) 0%,
+            rgba(7, 26, 47, 0.5) 35%,
+            rgba(7, 26, 47, 0) 60%);
+      }
+    }
+
+    .restaurant-shop__card {
+      color: #fff;
+      background-color: #10283b;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+}
