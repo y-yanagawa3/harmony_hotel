@@ -34,6 +34,30 @@ body#top .top-img img {
     height: 100vh;
   }
 }
+body#top .top-img .add-animation {
+  -webkit-animation: zoomUp 10s linear 0s normal both;
+          animation: zoomUp 10s linear 0s normal both;
+}
+@-webkit-keyframes zoomUp {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+@keyframes zoomUp {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
 body#top .top-img .header__logo-img {
   position: absolute;
   top: 50%;
@@ -84,6 +108,46 @@ body#top .top-img .scroll-container .wavy-text .wavy-text_arrow {
           transform: translate(-50%, -50%) rotate(-45deg);
   -webkit-animation: float 2s infinite;
           animation: float 2s infinite;
+}
+@-webkit-keyframes wave {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@keyframes wave {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes float {
+  0%, 100% {
+    -webkit-transform: translateY(-20%) rotate(-45deg);
+            transform: translateY(-20%) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(20%) rotate(-45deg);
+            transform: translateY(20%) rotate(-45deg);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    -webkit-transform: translateY(-20%) rotate(-45deg);
+            transform: translateY(-20%) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(20%) rotate(-45deg);
+            transform: translateY(20%) rotate(-45deg);
+  }
 }
 body#top main .global-nav {
   padding-top: 1.5rem;

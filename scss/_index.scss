@@ -35,19 +35,19 @@ body#top {
       }
     }
 
-    // .add-animation {
-    //   animation: zoomUp 10s linear 0s normal both;
-    // }
+    .add-animation {
+      animation: zoomUp 10s linear 0s normal both;
+    }
 
-    // @keyframes zoomUp {
-    //   0% {
-    //     transform: scale(1);
-    //   }
+    @keyframes zoomUp {
+      0% {
+        transform: scale(1);
+      }
 
-    //   100% {
-    //     transform: scale(1.15);
-    //   }
-    // }
+      100% {
+        transform: scale(1.15);
+      }
+    }
 
     .header__logo-img {
       position: absolute;
@@ -99,29 +99,29 @@ body#top {
         }
       }
 
-      // @keyframes wave {
+      @keyframes wave {
 
-      //   0%,
-      //   100% {
-      //     transform: translateY(0);
-      //   }
+        0%,
+        100% {
+          transform: translateY(0);
+        }
 
-      //   50% {
-      //     transform: translateY(-10px);
-      //   }
-      // }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
 
-      // @keyframes float {
+      @keyframes float {
 
-      //   0%,
-      //   100% {
-      //     transform: translateY(-20%) rotate(-45deg);
-      //   }
+        0%,
+        100% {
+          transform: translateY(-20%) rotate(-45deg);
+        }
 
-      //   50% {
-      //     transform: translateY(20%) rotate(-45deg);
-      //   }
-      // }
+        50% {
+          transform: translateY(20%) rotate(-45deg);
+        }
+      }
     }
   }
 
@@ -413,7 +413,6 @@ body#top {
 
   .stay {
     width: 100%;
-    // padding: 9rem 6rem 0;
     position: relative;
     justify-content: flex-end;
 
@@ -809,7 +808,6 @@ body#top {
 
     &__content {
       width: 55%;
-      // background-color: var(--main-color);
       background-color: var(--color-wh);
       border: 1px solid var(--main-color);
       padding: 1.5rem;
