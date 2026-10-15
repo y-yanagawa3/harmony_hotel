@@ -2205,7 +2205,8 @@ body#stay {
 }
 body#stay .rooms-intro {
   width: 100%;
-  min-height: 500px;
+  height: 80vh;
+  min-height: 600px;
   margin-top: -5rem;
   position: relative;
   background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.7), transparent 35%), radial-gradient(circle at 80% 70%, rgba(220, 214, 198, 0.25), transparent 40%), linear-gradient(135deg, #f8f6f0, #f1eee6);
@@ -2217,11 +2218,17 @@ body#stay .rooms-intro::before {
   background-image: repeating-linear-gradient(0deg, rgba(120, 110, 90, 0.025) 0, rgba(120, 110, 90, 0.025) 1px, transparent 1px, transparent 4px);
 }
 body#stay .rooms-intro__decoration {
+  position: absolute;
   width: 35%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  top: 30px;
+  left: -20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
   body#stay .rooms-intro__decoration {
-    display: none;
+    top: 70px;
+    width: 40%;
   }
 }
 body#stay .rooms-intro__inner {

@@ -107,7 +107,8 @@ body#stay {
 ========================================================= */
   .rooms-intro {
     width: 100%;
-    min-height: 500px;
+    height: 80vh;
+    min-height: 600px;
     margin-top: -5rem;
     position: relative;
     background:
@@ -134,10 +135,15 @@ body#stay {
     }
 
     &__decoration {
+      position: absolute;
       width: 35%;
+      transform: rotate(-5deg);
+      top: 30px;
+      left: -20px;
 
-      @include media-sp {
-        display: none;
+      @include media-tb {
+        top: 70px;
+        width: 40%;
       }
     }
 
