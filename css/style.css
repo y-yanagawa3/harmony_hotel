@@ -2256,7 +2256,7 @@ body#stay .rooms-intro__number {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
 }
 body#stay .rooms-intro__text {
-  padding: 1rem;
+  padding: 0 1rem;
   line-height: 2;
   letter-spacing: 0.12em;
 }
