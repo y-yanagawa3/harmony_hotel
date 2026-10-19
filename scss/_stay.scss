@@ -2,12 +2,15 @@
 @import './mixin';
 
 body#stay {
-  font-family: "Noto Serif JP", serif;
 
   .header {
     opacity: 1;
     pointer-events: painted;
     transform: translateY(0);
+  }
+
+  main {
+    font-family: "Noto Serif JP", serif;
   }
 
 /* =========================================================

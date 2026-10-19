@@ -2095,14 +2095,14 @@ body .js-fade.is-visible {
           transform: translateY(0);
 }
 
-body#stay {
-  font-family: "Noto Serif JP", serif;
-}
 body#stay .header {
   opacity: 1;
   pointer-events: painted;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+body#stay main {
+  font-family: "Noto Serif JP", serif;
 }
 body#stay {
   /* =========================================================
